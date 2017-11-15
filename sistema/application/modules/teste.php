@@ -1,0 +1,4 @@
+<remessa>
+    <hd h01="0" h02="PRP" h03="PORTAL PUBLICO" h04="13012016" h05="BFO" h06="SDT" h07="TPR" h08="10" h09="1" h10="1" h11="1" h12="1" h13="" h14="043" h15="4302352" h16="" h17="1"  /><tr t01="1" t02="PRP" t03="" t04="PORTAL PUBLICO" t05="Rodrigo Baldissera da Silva" t06="01496705084" t07="av. lasar segal" t08="9" t09="PORTO ALEGRE" t10="RS" t11="PRP" t12="CDA" t13="22039" t14="08012016" t15="10012016" t16="001" t17="652.00" t18="613.23" t19="PORTO ALEGRE" t20="" t21="" t22="1" t23="Rodrigo Baldissera da Silva" t24="002" t25="01496705084" t26="" t27="av. lasar segal" t28="9" t29="PORTO ALEGRE" t30="RS" t31="0" t32="0" t33="" t34="0" t35="0" t36="I" t37="0" t38="" t39="" t40="0" t41="0" t42="0" t43="0" t44="0" t45="0" t46="0" t47="" t48="0" t49="0" t50="0" t51="" t52="2" /> 
+    <tl t01="9" t02="PRP" t03="PORTAL PUBLICO" t04="13012016" t05="00004" t06="613.23" t07="" t08="3"  /> 
+</remessa>

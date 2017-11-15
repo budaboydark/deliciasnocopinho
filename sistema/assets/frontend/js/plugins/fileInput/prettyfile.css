@@ -1,0 +1,118 @@
+/* Example 1 */
+
+.input1 {
+  width: 35em;
+  padding: 2em;
+  background: #E9F1B4;
+  margin: 1em auto;
+  text-align: left;
+  overflow: hidden;
+}
+
+.input1 .pf_wrap_class {
+  height: 1%;
+  overflow: hidden;
+}
+
+.input1 .pf_ph_cont {
+  width: 34em;
+  float: left;
+  overflow: hidden;
+}
+
+.input1 .pf_ph_cont strong {
+  float: left;
+  font-size: x-small;
+  padding: 0 0 0 0;
+  width: 13.9em;
+  height: 2.9em;
+  background: url('../img/button.png') no-repeat center center;
+}
+
+.input1 .pf_ph_cont strong span {
+  display: none;
+}
+
+.input1 .pf_ph {
+  float: left;
+  font-size: 1.2em;
+  padding: 0.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 15.5em;
+}
+
+/* Example 2 */
+
+.input2 {
+  width: 35em;
+  padding: 2em;
+  background: #BAD1F0;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.input2 .pf_wrap_class {
+  margin: 0 auto;
+}
+
+.input2 .pf_ph_cont strong {
+  display: block;
+  width: 11.5em;
+  height: 3.5em;
+  background: url('../img/nofile_cool.png') no-repeat center top;
+}
+
+.input2 .selected .pf_ph_cont strong {
+  background: url('../img/nofile_cool.png') no-repeat center bottom;
+}
+
+.input2 .pf_ph_cont strong span {
+  display: none;
+}
+
+/* Example 3 */
+
+.input3 {
+  *padding: 2em;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.input3 .pf_wrap_class {
+  margin: 0 auto;
+  width: 430px !important;
+  margin-top: -7px !important;
+}
+
+.input3 .pf_ph_cont {
+  display: block;
+  width: 407px;
+  overflow: hidden;
+}
+.input3 .pf_ph_cont strong {
+  display: inline;
+  float: left;
+  width: 11.5em;
+  position:relative;
+  top:-10px;
+  height: 3.5em;
+  background: url('img/browse.png') no-repeat center top;
+}
+
+.input3 .pf_ph {
+  float: left;
+  text-align: left;
+  background:none;
+  font-size: 12px;
+  color:#666666;
+  padding: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 244px;
+  margin-top: -13px;
+}
+
+.input3 .pf_ph_cont strong span {
+  display: none;
+}

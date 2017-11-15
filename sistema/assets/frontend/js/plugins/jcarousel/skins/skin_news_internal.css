@@ -1,0 +1,73 @@
+.jcarousel-container-vertical {
+	height: 420px;
+	width: 300px;
+	margin-left: 0px !important;
+}
+
+.jcarousel-clip-vertical {
+    height: 420px;
+}
+
+.jcarousel-item {
+    height: 60px;
+}
+
+.jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  vertical Buttons
+ */
+.jcarousel-next-vertical {
+    position: absolute;
+    bottom: -50px;
+    left: 70px;
+    width: 151px;
+    height: 31px;
+    cursor: pointer;
+    background: transparent url(bullet_arrow6.png) no-repeat 0 0;
+}
+
+
+.jcarousel-next-vertical:hover {
+    background-position: 0px 0;
+}
+
+.jcarousel-next-vertical:active {
+    background-position: 0px 0;
+}
+
+.jcarousel-next-disabled-vertical,
+.jcarousel-next-disabled-vertical:hover,
+.jcarousel-next-disabled-vertical:active {
+    cursor: default;
+    background-position: -151px 0;
+}
+
+.jcarousel-prev-vertical {
+    position: absolute;
+    top: -30px;
+    left: 70px;
+    width: 151px;
+    height: 31px;
+    cursor: pointer;
+    background: transparent url(bullet_arrow7.png) no-repeat -151px 0;
+}
+
+
+.jcarousel-prev-vertical:hover {
+    background-position: -151px 0;
+}
+
+.jcarousel-prev-vertical:active {
+    background-position: -151px 0;
+}
+
+.jcarousel-prev-disabled-vertical,
+.jcarousel-prev-disabled-vertical:hover,
+.jcarousel-prev-disabled-vertical:active {
+    cursor: default;
+    background-position: 0px 0px;
+}

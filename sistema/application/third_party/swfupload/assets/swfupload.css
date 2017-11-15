@@ -1,0 +1,155 @@
+/* -- Table Styles ------------------------------- */
+
+#images_files .progressWrapper {
+	width: 100%;
+	overflow: hidden;
+}
+
+#images_files .progressContainer {
+	margin: 5px;
+	padding: 4px;
+	border: solid 1px #E8E8E8;
+	background-color: #F7F7F7;
+	overflow: hidden;
+}
+/* Message */
+#images_files .message {
+	margin: 1em 0;
+	padding: 10px 20px;
+	border: solid 1px #FFDD99;
+	background-color: #FFFFCC;
+	overflow: hidden;
+}
+/* Error */
+#images_files .red {
+	border: solid 1px #B50000;
+	background-color: #FFEBEB;
+}
+
+/* Current */
+#images_files .green {
+	border: solid 1px #DDF0DD;
+	background-color: #EBFFEB;
+}
+
+/* Complete */
+#images_files .blue {
+	border: solid 1px #CEE2F2;
+	background-color: #F0F5FF;
+}
+
+#images_files .progressName {
+	font-size: 8pt;
+	font-weight: 700;
+	color: #555;
+	width: 323px;
+	height: 2em;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#images_files .progressBarInProgress,
+#images_files .progressBarComplete,
+#images_files .progressBarError {
+	font-size: 0;
+	width: 0%;
+	height: 2px;
+	background-color: blue;
+	margin-top: 2px;
+}
+
+#images_files .progressBarComplete {
+	width: 100%;
+	background-color: green;
+	visibility: hidden;
+}
+
+#images_files .progressBarError {
+	width: 100%;
+	background-color: red;
+	visibility: hidden;
+}
+
+#images_files .progressBarStatus {
+	margin-top: 2px;
+	width: 337px;
+	font-size: 7pt;
+	font-family: Arial;
+	text-align: left;
+	white-space: nowrap;
+}
+
+#images_files a.progressCancel {
+	font-size: 0;
+	display: block;
+	height: 14px;
+	width: 14px;
+	background-image: url(images/cancelbutton.gif);
+	background-repeat: no-repeat;
+	background-position: -14px 0px;
+	float: right;
+}
+
+#images_files a.progressCancel:hover {
+	background-position: 0px 0px;
+}
+
+
+/* -- SWFUpload Object Styles ------------------------------- */
+#thumbnails {
+	padding-top: 20px;
+}
+
+#images_files .swfupload {
+	vertical-align: top;
+}
+
+.thumb_content {
+	font-size: 10px;
+	float: left;
+	padding: 15px;
+	height: 150px;
+	position: relative;
+    cursor: pointer;
+}
+
+.thumb_content a.btn-del,
+.thumb_content a.btn-del {
+	font-size: 11px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background:  url(images/cancelbutton.gif) no-repeat;
+	width: 14px;
+	height: 14px;
+	text-indent: -9999px;
+}
+
+/***** 39. GALLERY STYLES *****/
+/******************************/
+.gallerywrapper { padding: 20px; }
+.imagelist { list-style: none; }
+.imagelist li { position: relative; float: left; padding: 5px; margin: 0 20px 20px 0; background: #fff; border: 1px solid #ddd; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; }
+.imagelist li:hover { border-color: #ccc; }
+.imagelist li img { display: block; margin-bottom: 10px;  }
+.imagelist li span { display: block; text-align: right;}
+.imagelist li span a { vertical-align: middle; }
+.imagelist li span a.name { font-weight: bold; float: left; color: #999; text-align: left; overflow: hidden; width: 160px; height: 24px; }
+.imagelist li span a.name:hover { color: #333; text-decoration: none; }
+.imagelist li span a.edit, .imagelist li span a.view, .imagelist li span a.delete { display: inline-block; width: 16px; height: 16px; cursor: pointer; margin-left: 5px; vertical-align: middle; opacity: 0.5; }
+.imagelist li span a.edit:hover, .imagelist li span a.view:hover, .imagelist li span a.delete:hover { opacity: 1; }
+.imagelist li span a.edit { background: url(images/editor.png); }
+.imagelist li span a.view { background: url(images/glass.png); }
+.imagelist li span a.delete { background: url(images/trash.png); }
+.imagelist li .move_icon { position: absolute; top: -5px; right: -10px; width: 17px; height: 14px; display: block; }
+
+.photoEdit { width: 480px; }
+.photoEdit h3 { font-size: 18px; }
+.notifyMessage { padding: 7px 10px; font-weight: bold; margin: 10px 0; display: none; }
+.notifySuccess { border: 1px solid #C1D779; background: #EFFEB9; display: block; }
+.notifyError { border: 1px solid #E18B7C; background: #FAD5CF; display: block; }
+
+a.btn_add_foto  { margin-top: 5px; background: url(images/btnload.png) no-repeat center center; display: block !important; float: left !important; }
+.text_swfupload_description { padding-left: 20px; float: left;  display: block; }
+.boxTextUpfiles { float: left; font: normal 12px Arial; margin-left: 20px; }

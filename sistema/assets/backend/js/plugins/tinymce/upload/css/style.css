@@ -1,0 +1,2 @@
+a#buttonUpload { padding: 3px 10px; background: #333; background-image: none; color: #fff; text-decoration: none; width:40px; display: block; float: right;}
+a#buttonUpload.loading { background: url(../img/loading.gif) no-repeat center center; text-indent: -9999px;}

@@ -1,0 +1,23 @@
+.image_carousel {
+}
+.showcase .image_carousel {
+	position: relative;
+}
+.showcase .image_carousel img {
+	display: block;
+	float: left;
+}
+.showcase .clearfix {
+	float: none;
+	clear: both;
+}
+/*- -*/
+.showcase .caroufredsel_wrapper {
+	width: 100% !important;
+	height: 489px !important;
+	overflow: hidden !important; 
+}
+.showcase .caroufredsel_wrapper #conceptual {
+	width: 100% !important;
+	float: left !important;
+}
