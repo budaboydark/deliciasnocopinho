@@ -17,7 +17,7 @@ if (!defined('BASEPATH'))
   | path to your installation.
   |
  */
-$config['base_url'] = 'http://localhost/deliciasnocopinho/sistema';
+$config['base_url'] = 'http://admin.deliciasnocopinho.com/';
 
 /*
   |--------------------------------------------------------------------------
