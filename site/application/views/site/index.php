@@ -34,7 +34,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
             <div class="navbar-inner">
                 <div class="container">
                     <a href="<?php echo base_url(); ?>template/pluton/#" class="brand">
-                        <img src="images/logo.png" width="120" height="40" alt="Logo" />
+                        <img src="<?php echo base_url(); ?>template/pluton/images/logo.png" width="120" height="40" alt="Logo" />
                         <!-- This is website logo -->
                     </a>
                     <!-- Navigation button, visible on small resolution -->
@@ -44,13 +44,13 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <!-- Main navigation -->
                     <div class="nav-collapse collapse pull-right">
                         <ul class="nav" id="top-navigation">
-                            <li class="active"><a href="<?php echo base_url(); ?>template/pluton/#home">Home</a></li>
-                            <li><a href="<?php echo base_url(); ?>template/pluton/#service">Services</a></li>
-                            <li><a href="<?php echo base_url(); ?>template/pluton/#portfolio">Portfolio</a></li>
-                            <li><a href="<?php echo base_url(); ?>template/pluton/#about">About</a></li>
-                            <li><a href="<?php echo base_url(); ?>template/pluton/#clients">Clients</a></li>
-                            <li><a href="<?php echo base_url(); ?>template/pluton/#price">Price</a></li>
-                            <li><a href="<?php echo base_url(); ?>template/pluton/#contact">Contact</a></li>
+                            <li class="active"><a href="<?php echo base_url(); ?>#home">Home</a></li>
+                            <li><a href="<?php echo base_url(); ?>#service">Services</a></li>
+                            <li><a href="<?php echo base_url(); ?>#portfolio">Portfolio</a></li>
+                            <li><a href="<?php echo base_url(); ?>#about">About</a></li>
+                            <li><a href="<?php echo base_url(); ?>#clients">Clients</a></li>
+                            <li><a href="<?php echo base_url(); ?>#price">Price</a></li>
+                            <li><a href="<?php echo base_url(); ?>#contact">Contact</a></li>
                         </ul>
                     </div>
                     <!-- End main navigation -->
@@ -71,9 +71,9 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         <h2 class="fittext2">Welcome to pluton theme</h2>
                         <h4>Clean & responsive</h4>
                         <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
-                        <a href="<?php echo base_url(); ?>template/pluton/#" class="da-link button">Read more</a>
+                        <a href="<?php echo base_url(); ?>#" class="da-link button">Read more</a>
                         <div class="da-img">
-                            <img src="images/Slider01.png" alt="image01" width="320">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Slider01.png" alt="image01" width="320">
                         </div>
                     </div>
                     <!-- End first slide -->
@@ -82,9 +82,9 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         <h2>Easy management</h2>
                         <h4>Easy to use</h4>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <a href="<?php echo base_url(); ?>template/pluton/#" class="da-link button">Read more</a>
+                        <a href="<?php echo base_url(); ?>#" class="da-link button">Read more</a>
                         <div class="da-img">
-                            <img src="images/Slider02.png" width="320" alt="image02">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Slider02.png" width="320" alt="image02">
                         </div>
                     </div>
                     <!-- End second slide -->
@@ -93,9 +93,9 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         <h2>Revolution</h2>
                         <h4>Customizable</h4>
                         <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        <a href="<?php echo base_url(); ?>template/pluton/#" class="da-link button">Read more</a>
+                        <a href="<?php echo base_url(); ?>#" class="da-link button">Read more</a>
                         <div class="da-img">
-                            <img src="images/Slider03.png" width="320" alt="image03">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Slider03.png" width="320" alt="image03">
                         </div>
                     </div>
                     <!-- Start third slide -->
@@ -123,7 +123,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <div class="span4">
                         <div class="centered service">
                             <div class="circle-border zoom-in">
-                                <img class="img-circle" src="images/Service1.png" alt="service 1">
+                                <img class="img-circle" src="<?php echo base_url(); ?>template/pluton/images/Service1.png" alt="service 1">
                             </div>
                             <h3>Modern Design</h3>
                             <p>We Create Modern And Clean Theme For Your Business Company.</p>
@@ -132,7 +132,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <div class="span4">
                         <div class="centered service">
                             <div class="circle-border zoom-in">
-                                <img class="img-circle" src="images/Service2.png" alt="service 2" />
+                                <img class="img-circle" src="<?php echo base_url(); ?>template/pluton/images/Service2.png" alt="service 2" />
                             </div>
                             <h3>Powerfull Theme</h3>
                             <p>We Create Modern And Powerful Theme With Lots Animation And Features</p>
@@ -141,7 +141,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <div class="span4">
                         <div class="centered service">
                             <div class="circle-border zoom-in">
-                                <img class="img-circle" src="images/Service3.png" alt="service 3">
+                                <img class="img-circle" src="<?php echo base_url(); ?>template/pluton/images/Service3.png" alt="service 3">
                             </div>
                             <h3>Clean Code</h3>
                             <p>We Create Modern And Powerful Html5 And CSS3 Code Easy For Read And Customize.</p>
@@ -161,23 +161,23 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                 </div>
                 <ul class="nav nav-pills">
                     <li class="filter" data-filter="all">
-                        <a href="<?php echo base_url(); ?>template/pluton/#noAction">All</a>
+                        <a href="<?php echo base_url(); ?>#noAction">All</a>
                     </li>
                     <li class="filter" data-filter="web">
-                        <a href="<?php echo base_url(); ?>template/pluton/#noAction">Web</a>
+                        <a href="<?php echo base_url(); ?>#noAction">Web</a>
                     </li>
                     <li class="filter" data-filter="photo">
-                        <a href="<?php echo base_url(); ?>template/pluton/#noAction">Photo</a>
+                        <a href="<?php echo base_url(); ?>#noAction">Photo</a>
                     </li>
                     <li class="filter" data-filter="identity">
-                        <a href="<?php echo base_url(); ?>template/pluton/#noAction">Identity</a>
+                        <a href="<?php echo base_url(); ?>#noAction">Identity</a>
                     </li>
                 </ul>
                 <!-- Start details for portfolio project 1 -->
                 <div id="single-project">
                     <div id="slidingDiv" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="images/Portfolio01.png" alt="project 1" />
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio01.png" alt="project 1" />
                         </div>
                         <div class="span6">
                             <div class="project-description">
@@ -205,7 +205,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <!-- Start details for portfolio project 2 -->
                     <div id="slidingDiv1" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="images/Portfolio02.png" alt="project 2">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio02.png" alt="project 2">
                         </div>
                         <div class="span6">
                             <div class="project-description">
@@ -233,7 +233,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <!-- Start details for portfolio project 3 -->
                     <div id="slidingDiv2" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="images/Portfolio03.png" alt="project 3">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio03.png" alt="project 3">
                         </div>
                         <div class="span6">
                             <div class="project-description">
@@ -261,7 +261,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <!-- Start details for portfolio project 4 -->
                     <div id="slidingDiv3" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="images/Portfolio04.png" alt="project 4">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio04.png" alt="project 4">
                         </div>
                         <div class="span6">
                             <div class="project-description">
@@ -289,7 +289,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <!-- Start details for portfolio project 5 -->
                     <div id="slidingDiv4" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="images/Portfolio05.png" alt="project 5">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio05.png" alt="project 5">
                         </div>
                         <div class="span6">
                             <div class="project-description">
@@ -317,7 +317,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <!-- Start details for portfolio project 6 -->
                     <div id="slidingDiv5" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="images/Portfolio06.png" alt="project 6">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio06.png" alt="project 6">
                         </div>
                         <div class="span6">
                             <div class="project-description">
@@ -345,7 +345,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <!-- Start details for portfolio project 7 -->
                     <div id="slidingDiv6" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="images/Portfolio07.png" alt="project 7">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio07.png" alt="project 7">
                         </div>
                         <div class="span6">
                             <div class="project-description">
@@ -373,7 +373,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <!-- Start details for portfolio project 8 -->
                     <div id="slidingDiv7" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="images/Portfolio08.png" alt="project 8">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio08.png" alt="project 8">
                         </div>
                         <div class="span6">
                             <div class="project-description">
@@ -401,7 +401,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <!-- Start details for portfolio project 9 -->
                     <div id="slidingDiv8" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="images/Portfolio09.png" alt="project 9">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio09.png" alt="project 9">
                         </div>
                         <div class="span6">
                             <div class="project-description">
@@ -429,8 +429,8 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <ul id="portfolio-grid" class="thumbnails row">
                         <li class="span4 mix web">
                             <div class="thumbnail">
-                                <img src="images/Portfolio01.png" alt="project 1">
-                                <a href="<?php echo base_url(); ?>template/pluton/#single-project" class="more show_hide" rel="#slidingDiv">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio01.png" alt="project 1">
+                                <a href="<?php echo base_url(); ?>#single-project" class="more show_hide" rel="#slidingDiv">
                                     <i class="icon-plus"></i>
                                 </a>
                                 <h3>Thumbnail label</h3>
@@ -440,8 +440,8 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         </li>
                         <li class="span4 mix photo">
                             <div class="thumbnail">
-                                <img src="images/Portfolio02.png" alt="project 2">
-                                <a href="<?php echo base_url(); ?>template/pluton/#single-project" class="show_hide more" rel="#slidingDiv1">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio02.png" alt="project 2">
+                                <a href="<?php echo base_url(); ?>#single-project" class="show_hide more" rel="#slidingDiv1">
                                     <i class="icon-plus"></i>
                                 </a>
                                 <h3>Thumbnail label</h3>
@@ -451,8 +451,8 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         </li>
                         <li class="span4 mix identity">
                             <div class="thumbnail">
-                                <img src="images/Portfolio03.png" alt="project 3">
-                                <a href="<?php echo base_url(); ?>template/pluton/#single-project" class="more show_hide" rel="#slidingDiv2">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio03.png" alt="project 3">
+                                <a href="<?php echo base_url(); ?>#single-project" class="more show_hide" rel="#slidingDiv2">
                                     <i class="icon-plus"></i>
                                 </a>
                                 <h3>Thumbnail label</h3>
@@ -462,8 +462,8 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         </li>
                         <li class="span4 mix web">
                             <div class="thumbnail">
-                                <img src="images/Portfolio04.png" alt="project 4">
-                                <a href="<?php echo base_url(); ?>template/pluton/#single-project" class="show_hide more" rel="#slidingDiv3">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio04.png" alt="project 4">
+                                <a href="<?php echo base_url(); ?>#single-project" class="show_hide more" rel="#slidingDiv3">
                                     <i class="icon-plus"></i>
                                 </a>
                                 <h3>Thumbnail label</h3>
@@ -473,8 +473,8 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         </li>
                         <li class="span4 mix photo">
                             <div class="thumbnail">
-                                <img src="images/Portfolio05.png" alt="project 5">
-                                <a href="<?php echo base_url(); ?>template/pluton/#single-project" class="show_hide more" rel="#slidingDiv4">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio05.png" alt="project 5">
+                                <a href="<?php echo base_url(); ?>#single-project" class="show_hide more" rel="#slidingDiv4">
                                     <i class="icon-plus"></i>
                                 </a>
                                 <h3>Thumbnail label</h3>
@@ -484,8 +484,8 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         </li>
                         <li class="span4 mix identity">
                             <div class="thumbnail">
-                                <img src="images/Portfolio06.png" alt="project 6">
-                                <a href="<?php echo base_url(); ?>template/pluton/#single-project" class="show_hide more" rel="#slidingDiv5">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio06.png" alt="project 6">
+                                <a href="<?php echo base_url(); ?>#single-project" class="show_hide more" rel="#slidingDiv5">
                                     <i class="icon-plus"></i>
                                 </a>
                                 <h3>Thumbnail label</h3>
@@ -495,8 +495,8 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         </li>
                         <li class="span4 mix web">
                             <div class="thumbnail">
-                                <img src="images/Portfolio07.png" alt="project 7" />
-                                <a href="<?php echo base_url(); ?>template/pluton/#single-project" class="show_hide more" rel="#slidingDiv6">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio07.png" alt="project 7" />
+                                <a href="<?php echo base_url(); ?>#single-project" class="show_hide more" rel="#slidingDiv6">
                                     <i class="icon-plus"></i>
                                 </a>
                                 <h3>Thumbnail label</h3>
@@ -506,8 +506,8 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         </li>
                         <li class="span4 mix photo">
                             <div class="thumbnail">
-                                <img src="images/Portfolio08.png" alt="project 8">
-                                <a href="<?php echo base_url(); ?>template/pluton/#single-project" class="show_hide more" rel="#slidingDiv7">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio08.png" alt="project 8">
+                                <a href="<?php echo base_url(); ?>#single-project" class="show_hide more" rel="#slidingDiv7">
                                     <i class="icon-plus"></i>
                                 </a>
                                 <h3>Thumbnail label</h3>
@@ -517,8 +517,8 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         </li>
                         <li class="span4 mix identity">
                             <div class="thumbnail">
-                                <img src="images/Portfolio09.png" alt="project 9">
-                                <a href="<?php echo base_url(); ?>template/pluton/#single-project" class="show_hide more" rel="#slidingDiv8">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio09.png" alt="project 9">
+                                <a href="<?php echo base_url(); ?>#single-project" class="show_hide more" rel="#slidingDiv8">
                                     <i class="icon-plus"></i>
                                 </a>
                                 <h3>Thumbnail label</h3>
@@ -542,21 +542,21 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                 <div class="row-fluid team">
                     <div class="span4" id="first-person">
                         <div class="thumbnail">
-                            <img src="images/Team1.png" alt="team 1">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Team1.png" alt="team 1">
                             <h3>John Doe</h3>
                             <ul class="social">
                                 <li>
-                                    <a href="<?php echo base_url(); ?>template/pluton/">
+                                    <a href="<?php echo base_url(); ?>">
                                         <span class="icon-facebook-circled"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>template/pluton/">
+                                    <a href="<?php echo base_url(); ?>">
                                         <span class="icon-twitter-circled"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>template/pluton/">
+                                    <a href="<?php echo base_url(); ?>">
                                         <span class="icon-linkedin-circled"></span>
                                     </a>
                                 </li>
@@ -569,21 +569,21 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     </div>
                     <div class="span4" id="second-person">
                         <div class="thumbnail">
-                            <img src="images/Team2.png" alt="team 1">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Team2.png" alt="team 1">
                             <h3>John Doe</h3>
                             <ul class="social">
                                 <li>
-                                    <a href="<?php echo base_url(); ?>template/pluton/">
+                                    <a href="<?php echo base_url(); ?>">
                                         <span class="icon-facebook-circled"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>template/pluton/">
+                                    <a href="<?php echo base_url(); ?>">
                                         <span class="icon-twitter-circled"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>template/pluton/">
+                                    <a href="<?php echo base_url(); ?>">
                                         <span class="icon-linkedin-circled"></span>
                                     </a>
                                 </li>
@@ -596,21 +596,21 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     </div>
                     <div class="span4" id="third-person">
                         <div class="thumbnail">
-                            <img src="images/Team3.png" alt="team 1">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/Team3.png" alt="team 1">
                             <h3>John Doe</h3>
                             <ul class="social">
                                 <li>
-                                    <a href="<?php echo base_url(); ?>template/pluton/">
+                                    <a href="<?php echo base_url(); ?>">
                                         <span class="icon-facebook-circled"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>template/pluton/">
+                                    <a href="<?php echo base_url(); ?>">
                                         <span class="icon-twitter-circled"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>template/pluton/">
+                                    <a href="<?php echo base_url(); ?>">
                                         <span class="icon-linkedin-circled"></span>
                                     </a>
                                 </li>
@@ -663,7 +663,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
             <div class="triangle"></div>
             <div class="container centered">
                 <p class="large-text">Elegance is not the abundance of simplicity. It is the absence of complexity.</p>
-                <a href="<?php echo base_url(); ?>template/pluton/#" class="button">Purshase now</a>
+                <a href="<?php echo base_url(); ?>#" class="button">Purshase now</a>
             </div>
         </div>
         <!-- Client section start -->
@@ -682,7 +682,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                                 <p>"I've worked too hard and too long to let anything stand in the way of my goals. I will not let my teammates down and I will not let myself down."</p>
                                 <div class="whopic">
                                     <div class="arrow"></div>
-                                    <img src="images/Client1.png" class="centered" alt="client 1">
+                                    <img src="<?php echo base_url(); ?>template/pluton/images/Client1.png" class="centered" alt="client 1">
                                     <strong>John Doe
                                         <small>Client</small>
                                     </strong>
@@ -694,7 +694,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                                 <p>"In motivating people, you've got to engage their minds and their hearts. I motivate people, I hope, by example - and perhaps by excitement, by having productive ideas to make others feel involved."</p>
                                 <div class="whopic">
                                     <div class="arrow"></div>
-                                    <img src="images/Client2.png" class="centered" alt="client 2">
+                                    <img src="<?php echo base_url(); ?>template/pluton/images/Client2.png" class="centered" alt="client 2">
                                     <strong>John Doe
                                         <small>Client</small>
                                     </strong>
@@ -706,7 +706,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                                 <p>"Determine never to be idle. No person will have occasion to complain of the want of time who never loses any. It is wonderful how much may be done if we are always doing."</p>
                                 <div class="whopic">
                                     <div class="arrow"></div>
-                                    <img src="images/Client3.png" class="centered" alt="client 3">
+                                    <img src="<?php echo base_url(); ?>template/pluton/images/Client3.png" class="centered" alt="client 3">
                                     <strong>John Doe
                                         <small>Client</small>
                                     </strong>
@@ -734,38 +734,38 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     </div>
                     <ul class="row client-slider" id="clint-slider">
                         <li>
-                            <a href="<?php echo base_url(); ?>template/pluton/">
-                                <img src="images/clients/ClientLogo01.png" alt="client logo 1">
+                            <a href="<?php echo base_url(); ?>">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/clients/ClientLogo01.png" alt="client logo 1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/clients/ClientLogo02.png" alt="client logo 2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/clients/ClientLogo03.png" alt="client logo 3">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/clients/ClientLogo04.png" alt="client logo 4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/clients/ClientLogo05.png" alt="client logo 5">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/clients/ClientLogo02.png" alt="client logo 6">
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo base_url(); ?>template/pluton/">
-                                <img src="images/clients/ClientLogo02.png" alt="client logo 2">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url(); ?>template/pluton/">
-                                <img src="images/clients/ClientLogo03.png" alt="client logo 3">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url(); ?>template/pluton/">
-                                <img src="images/clients/ClientLogo04.png" alt="client logo 4">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url(); ?>template/pluton/">
-                                <img src="images/clients/ClientLogo05.png" alt="client logo 5">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url(); ?>template/pluton/">
-                                <img src="images/clients/ClientLogo02.png" alt="client logo 6">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url(); ?>template/pluton/">
-                                <img src="images/clients/ClientLogo04.png" alt="client logo 7">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/clients/ClientLogo04.png" alt="client logo 7">
                             </a>
                         </li>
                     </ul>
@@ -788,7 +788,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                             <li><strong>24/7</strong> Support</li>
                             <li><strong>5 GB</strong> File Storage</li>
                         </ul>
-                        <a href="<?php echo base_url(); ?>template/pluton/#" class="button button-ps">BUY</a>
+                        <a href="<?php echo base_url(); ?>#" class="button button-ps">BUY</a>
                     </div>
                     <div class="span4 price-column">
                         <h3>Pro</h3>
@@ -798,7 +798,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                             <li><strong>24/7</strong> Support</li>
                             <li><strong>25 GB</strong> File Storage</li>
                         </ul>
-                        <a href="<?php echo base_url(); ?>template/pluton/#" class="button button-ps">BUY</a>
+                        <a href="<?php echo base_url(); ?>#" class="button button-ps">BUY</a>
                     </div>
                     <div class="span4 price-column">
                         <h3>Premium</h3>
@@ -808,12 +808,12 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                             <li><strong>24/7</strong> Support</li>
                             <li><strong>50 GB</strong> File Storage</li>
                         </ul>
-                        <a href="<?php echo base_url(); ?>template/pluton/#" class="button button-ps">BUY</a>
+                        <a href="<?php echo base_url(); ?>#" class="button button-ps">BUY</a>
                     </div>
                 </div>
                 <div class="centered">
                     <p class="price-text">We Offer Custom Plans. Contact Us For More Info.</p>
-                    <a href="<?php echo base_url(); ?>template/pluton/#contact" class="button">Contact Us</a>
+                    <a href="<?php echo base_url(); ?>#contact" class="button">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -905,22 +905,22 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <div class="row-fluid centered">
                         <ul class="social">
                             <li>
-                                <a href="<?php echo base_url(); ?>template/pluton/">
+                                <a href="<?php echo base_url(); ?>">
                                     <span class="icon-facebook-circled"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>template/pluton/">
+                                <a href="<?php echo base_url(); ?>">
                                     <span class="icon-twitter-circled"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>template/pluton/">
+                                <a href="<?php echo base_url(); ?>">
                                     <span class="icon-linkedin-circled"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>template/pluton/">
+                                <a href="<?php echo base_url(); ?>">
                                     <span class="icon-pinterest-circled"></span>
                                 </a>
                             </li>
@@ -942,7 +942,6 @@ echo $template = $this->config->base_url('application/third_party/pluton');
         <!-- Contact section edn -->
         <!-- Footer section start -->
         <div class="footer">
-            <p>&copy; 2013 Theme by <a href="<?php echo base_url(); ?>template/pluton/http://www.graphberry.com">GraphBerry</a>, <a href="<?php echo base_url(); ?>template/pluton/http://goo.gl/NM84K2">Documentation</a></p>
         </div>
         <!-- Footer section end -->
         <!-- ScrollUp button start -->
@@ -953,20 +952,20 @@ echo $template = $this->config->base_url('application/third_party/pluton');
         </div>
         <!-- ScrollUp button end -->
         <!-- Include javascript -->
-        <script src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery.mixitup.js"></script>
-        <script type="text/javascript" src="js/bootstrap.js"></script>
-        <script type="text/javascript" src="js/modernizr.custom.js"></script>
-        <script type="text/javascript" src="js/jquery.bxslider.js"></script>
-        <script type="text/javascript" src="js/jquery.cslider.js"></script>
-        <script type="text/javascript" src="js/jquery.placeholder.js"></script>
-        <script type="text/javascript" src="js/jquery.inview.js"></script>
+        <script src="<?php echo base_url(); ?>template/pluton/js/jquery.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>template/pluton/js/jquery.mixitup.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>template/pluton/js/bootstrap.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>template/pluton/js/modernizr.custom.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>template/pluton/js/jquery.bxslider.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>template/pluton/js/jquery.cslider.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>template/pluton/js/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>template/pluton/js/jquery.inview.js"></script>
         <!-- Load google maps api and call initializeMap function defined in app.js -->
         <script async="" defer="" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=initializeMap"></script>
         <!-- css3-mediaqueries.js for IE8 or older -->
         <!--[if lt IE 9]>
             <script src="js/respond.min.js"></script>
         <![endif]-->
-        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>template/pluton/js/app.js"></script>
     </body>
 </html>
