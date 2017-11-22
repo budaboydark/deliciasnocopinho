@@ -8,6 +8,19 @@
  */
  jQuery(document).ready(function ($) {
 
+
+    $("#mais").click(function(){
+        var vorigin = $("#vorigin").val();
+        var x = $("#qtd").val();
+        x++;
+        var valor = (vorigin * x);
+        $("#total").val(valor);
+        $("#qtd").val(x);
+
+    });
+
+
+
     var lastId,
     topMenu = $("#top-navigation"),
     topMenuHeight = topMenu.outerHeight(),

@@ -1,13 +1,9 @@
-<?php
-echo $template = $this->config->base_url('application/third_party/pluton');
-
-?>
 <html lang="en">
     
     <head>
         <meta charset=utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pluton Theme by BraphBerry.com</title>
+        <title>Delicias No Copinho</title>
         <!-- Load Roboto font -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- Load css styles -->
@@ -34,7 +30,7 @@ echo $template = $this->config->base_url('application/third_party/pluton');
             <div class="navbar-inner">
                 <div class="container">
                     <a href="<?php echo base_url(); ?>template/pluton/#" class="brand">
-                        <img src="<?php echo base_url(); ?>template/pluton/images/logo.png" width="120" height="40" alt="Logo" />
+                        <img src="<?php echo base_url(); ?>template/pluton/images/logoTipo.png" width="120" height="60" alt="Logo" />
                         <!-- This is website logo -->
                     </a>
                     <!-- Navigation button, visible on small resolution -->
@@ -45,12 +41,12 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <div class="nav-collapse collapse pull-right">
                         <ul class="nav" id="top-navigation">
                             <li class="active"><a href="<?php echo base_url(); ?>#home">Home</a></li>
-                            <li><a href="<?php echo base_url(); ?>#service">Services</a></li>
-                            <li><a href="<?php echo base_url(); ?>#portfolio">Portfolio</a></li>
-                            <li><a href="<?php echo base_url(); ?>#about">About</a></li>
-                            <li><a href="<?php echo base_url(); ?>#clients">Clients</a></li>
-                            <li><a href="<?php echo base_url(); ?>#price">Price</a></li>
-                            <li><a href="<?php echo base_url(); ?>#contact">Contact</a></li>
+                            <li><a href="<?php echo base_url(); ?>#service">Docês</a></li>
+                            <li><a href="<?php echo base_url(); ?>#portfolio">Salgados</a></li>
+                            <li><a href="<?php echo base_url(); ?>#about">Sobre</a></li>
+                            <li><a href="<?php echo base_url(); ?>#clients">Clientes</a></li>
+                            <li><a href="<?php echo base_url(); ?>#price">Kits</a></li>
+                            <li><a href="<?php echo base_url(); ?>#contact">Contato</a></li>
                         </ul>
                     </div>
                     <!-- End main navigation -->
@@ -68,12 +64,11 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                 <div class="container">
                     <!-- Start first slide -->
                     <div class="da-slide">
-                        <h2 class="fittext2">Welcome to pluton theme</h2>
+                        <h2 class="fittext2">#DelíciasNoCopinho</h2>
                         <h4>Clean & responsive</h4>
                         <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
-                        <a href="<?php echo base_url(); ?>#" class="da-link button">Read more</a>
                         <div class="da-img">
-                            <img src="<?php echo base_url(); ?>template/pluton/images/Slider01.png" alt="image01" width="320">
+                            <img src="<?php echo base_url(); ?>template/pluton/images/promo02.png" alt="image01" width="320">
                         </div>
                     </div>
                     <!-- End first slide -->
@@ -82,7 +77,6 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         <h2>Easy management</h2>
                         <h4>Easy to use</h4>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <a href="<?php echo base_url(); ?>#" class="da-link button">Read more</a>
                         <div class="da-img">
                             <img src="<?php echo base_url(); ?>template/pluton/images/Slider02.png" width="320" alt="image02">
                         </div>
@@ -93,7 +87,6 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                         <h2>Revolution</h2>
                         <h4>Customizable</h4>
                         <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        <a href="<?php echo base_url(); ?>#" class="da-link button">Read more</a>
                         <div class="da-img">
                             <img src="<?php echo base_url(); ?>template/pluton/images/Slider03.png" width="320" alt="image03">
                         </div>
@@ -161,28 +154,28 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                 </div>
                 <ul class="nav nav-pills">
                     <li class="filter" data-filter="all">
-                        <a href="<?php echo base_url(); ?>#noAction">All</a>
+                        <a href="<?php echo base_url(); ?>#noAction">Todos</a>
                     </li>
                     <li class="filter" data-filter="web">
-                        <a href="<?php echo base_url(); ?>#noAction">Web</a>
+                        <a href="<?php echo base_url(); ?>#noAction">Salgados</a>
                     </li>
                     <li class="filter" data-filter="photo">
-                        <a href="<?php echo base_url(); ?>#noAction">Photo</a>
+                        <a href="<?php echo base_url(); ?>#noAction">Doces</a>
                     </li>
                     <li class="filter" data-filter="identity">
-                        <a href="<?php echo base_url(); ?>#noAction">Identity</a>
+                        <a href="<?php echo base_url(); ?>#noAction">Bolos</a>
                     </li>
                 </ul>
                 <!-- Start details for portfolio project 1 -->
                 <div id="single-project">
                     <div id="slidingDiv" class="toggleDiv row-fluid single-project">
                         <div class="span6">
-                            <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio01.png" alt="project 1" />
+                            <img src="<?php echo base_url(); ?>template/pluton/images/coxinha01.png" alt="coxinha" />
                         </div>
                         <div class="span6">
                             <div class="project-description">
                                 <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
+                                    <h3>Salgados - Coxinha</h3>
                                     <span class="show_hide close">
                                         <i class="icon-cancel"></i>
                                     </span>
@@ -195,9 +188,20 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                                     <div>
                                         <span>Skills</span>HTML5, CSS3, JavaScript</div>
                                     <div>
-                                        <span>Link</span>http://examplecomp.com</div>
+                                        <span>Link</span>http://examplecomp.com
+                                    </div>
+                                    <div>
+                                        <span>unidade</span>R$0,50
+                                        <input type="hidden" id="vorigin" value="0.50" />
+                                    </div>
+                                    <div>
+                                        <span>Qtd</span>
+                                        <input type="text" readonly id="qtd" value="1" />
+                                        <input type="button" id="mais" value="+" />
+                                    </div>
+                                    <div><span>Total</span>R$<input type="text" id="total" readonly value="0.50" /></div>
                                 </div>
-                                <p>Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.</p>
+                                <p>Coxinhas são um sucesso, para sua festa.</p>
                             </div>
                         </div>
                     </div>
@@ -429,12 +433,12 @@ echo $template = $this->config->base_url('application/third_party/pluton');
                     <ul id="portfolio-grid" class="thumbnails row">
                         <li class="span4 mix web">
                             <div class="thumbnail">
-                                <img src="<?php echo base_url(); ?>template/pluton/images/Portfolio01.png" alt="project 1">
+                                <img src="<?php echo base_url(); ?>template/pluton/images/coxinha01.png" alt="coxinha">
                                 <a href="<?php echo base_url(); ?>#single-project" class="more show_hide" rel="#slidingDiv">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
+                                <h3>Coxinhas</h3>
+                                <p>salgados - Coxinha</p>
                                 <div class="mask"></div>
                             </div>
                         </li>
@@ -776,39 +780,45 @@ echo $template = $this->config->base_url('application/third_party/pluton');
         <div id="price" class="section secondary-section">
             <div class="container">
                 <div class="title">
-                    <h1>Price</h1>
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+                    <h1>Kits Promocionais</h1>
+                    <p>Os kits Promocionais vão até 20/12/2017.</p>
                 </div>
                 <div class="price-table row-fluid">
                     <div class="span4 price-column">
-                        <h3>Basic</h3>
+                        <h3>Kit 1</h3>
                         <ul class="list">
-                            <li class="price">$19,99</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>24/7</strong> Support</li>
-                            <li><strong>5 GB</strong> File Storage</li>
+                            <li class="price">R$199,90</li>
+                            <li><strong>200</strong> Salgadinhos</li>
+                            <li><strong>100</strong> Docinhos</li>
+                            <li><strong>1</strong> Torta Doce 2Kg</li>
+                            <li><strong>4</strong> Refrigerantes 2L</li>
+                            <li><strong>Max </strong>20 Pessoas</li>
                         </ul>
-                        <a href="<?php echo base_url(); ?>#" class="button button-ps">BUY</a>
+                        <a href="<?php echo base_url(); ?>#contact" class="button button-ps">Encomendar</a>
                     </div>
                     <div class="span4 price-column">
-                        <h3>Pro</h3>
+                        <h3>Kit 2</h3>
                         <ul class="list">
-                            <li class="price">$39,99</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>24/7</strong> Support</li>
-                            <li><strong>25 GB</strong> File Storage</li>
+                            <li class="price">R$299,90</li>
+                            <li><strong>300</strong> Salgadinhos</li>
+                            <li><strong>150</strong> Docinhos</li>
+                            <li><strong>1</strong> Torta Doce 3Kg</li>
+                            <li><strong>6</strong> Refrigerantes 2L</li>
+                            <li><strong>Max </strong>30 Pessoas</li>
                         </ul>
-                        <a href="<?php echo base_url(); ?>#" class="button button-ps">BUY</a>
+                        <a href="<?php echo base_url(); ?>#contact" class="button button-ps">Encomendar</a>
                     </div>
                     <div class="span4 price-column">
-                        <h3>Premium</h3>
+                        <h3>Kit 3</h3>
                         <ul class="list">
-                            <li class="price">$79,99</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>24/7</strong> Support</li>
-                            <li><strong>50 GB</strong> File Storage</li>
+                            <li class="price">R$399,90</li>
+                            <li><strong>400</strong> Salgadinhos</li>
+                            <li><strong>200</strong> Docinhos</li>
+                            <li><strong>1</strong> Torta Doce 4Kg</li>
+                            <li><strong>8</strong> Refrigerantes 2L</li>
+                            <li><strong>Max </strong>40 Pessoas</li>
                         </ul>
-                        <a href="<?php echo base_url(); ?>#" class="button button-ps">BUY</a>
+                        <a href="<?php echo base_url(); ?>#contact" class="button button-ps">Encomendar</a>
                     </div>
                 </div>
                 <div class="centered">
