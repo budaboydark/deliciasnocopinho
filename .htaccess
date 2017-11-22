@@ -1,0 +1,3 @@
+RewriteEngine On 
+AddDefaultCharset UTF-8
+RewriteCond %{HTTP_HOST} ^deliciasnocopinho.com/site$
