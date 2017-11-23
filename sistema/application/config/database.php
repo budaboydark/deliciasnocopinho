@@ -47,14 +47,10 @@
 
 $active_group = 'default';
 $active_record = TRUE;
-
-//$db['default']['hostname'] = 'mysql.giban.com.br';
-//$db['default']['username'] = 'giban';
-//$db['default']['password'] = 'G1b4n01';
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'panel';
+$db['default']['password'] = 'root';
+$db['default']['database'] = 'banco_teste';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
@@ -66,7 +62,5 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
-
-
 /* End of file database.php */
 /* Location: ./application/config/database.php */
