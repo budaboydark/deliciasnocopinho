@@ -21,6 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $config['menu_admin']['dashboard']['dashboard'] = array('title' => 'Inicial', 'link' => 'admin/dashboard', 'permissions' => '1,2', 'class' => 'widgets');
 $config['menu_admin']['dashboard']['user'] = array('title' => 'Funcion&aacute;rios', 'link' => 'admin/usuarios', 'permissions' => '1,2', 'class' => 'editor');
 $config['menu_admin']['dashboard']['logs'] = array('title' => 'Logs do Sistema', 'link' => 'admin/logs', 'permissions' => '1,2', 'class' => 'editor');
+$config['menu_admin']['dashboard']['clientes'] = array('title' => 'Clientes', 'link' => 'admin/cliente', 'permissions' => '1,2', 'class' => 'editor');
 
 $config['menu_admin']['relatorios']['reltitulos'] = array('title' => 'T&iacute;tulos', 'link' => 'admin/reltitulos', 'permissions' => '1,2', 'class' => 'gallery');
 $config['menu_admin']['relatorios']['relirregularidades'] = array('title' => 'Irregularidades', 'link' => 'admin/relirregularidades', 'permissions' => '1,2', 'class' => 'gallery');
