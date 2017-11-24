@@ -19,6 +19,16 @@
 
     });
 
+    $("#menos").click(function(){
+        var vorigin = $("#vorigin").val();
+        var x = $("#qtd").val();
+        x--;
+        var valor = (vorigin * x);
+        $("#total").val(valor);
+        $("#qtd").val(x);
+
+    });
+    
 
 
     var lastId,

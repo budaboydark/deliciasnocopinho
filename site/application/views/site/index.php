@@ -198,6 +198,7 @@
                                         <span>Qtd</span>
                                         <input type="text" readonly id="qtd" value="1" />
                                         <input type="button" id="mais" value="+" />
+                                        <input type="button" id="menos" value="-" />
                                     </div>
                                     <div><span>Total</span>R$<input type="text" id="total" readonly value="0.50" /></div>
                                 </div>
