@@ -60,35 +60,25 @@ class Admin_cliente extends MY_Controller {
 
     public function editar($id) {
         if (isset($id)):
-            $query = $this->db->select('pref_contribuintes.*, pref_contribuintes_instituicoes.nome, pref_abrasf_titulos.des_titu, pref_abrasf_dependencias.descricao');
-            $query = $this->db->from('pref_contribuintes');
-            $query = $this->db->join('pref_contribuintes_instituicoes', 'pref_contribuintes.idinstituicao = pref_contribuintes_instituicoes.id', 'inner');
-            $query = $this->db->join('pref_abrasf_titulos', 'pref_contribuintes_instituicoes.idtitulo = pref_abrasf_titulos.id', 'inner');
-            $query = $this->db->join('pref_abrasf_dependencias', 'pref_abrasf_dependencias.codigo = pref_contribuintes.iddependencia', 'inner');
-            $query = $this->db->where(array('pref_contribuintes.id' => $id))->get();
+            $query = $this->db->select('*');
+            $query = $this->db->from('cliente');
+            $query = $this->db->where(array('id' => $id))->get();
             $rs['data'] = $query->first_row('array');
         endif;
 
-        // select de instituicoes
-        $rs['cidade_info'] = $this->db->query('SELECT pac.nom_cida,pac.sig_uf FROM pref_abrasf_cidades pac INNER JOIN pref_configuracoes pc ON(pc.idn_cida=pac.idn_cida)')->first_row('array');
-
-        $query = $this->db->select('*')->from('pref_contribuintes_instituicoes')->get();
-        $rs['data_category'] = $query->result_array();
-
+        $endereco_query = $this->db->select('id_pref_abrasf_cidades,endereco,complemento,cep,numero')->from('cliente_endereco')->where('id',$rs['data']['id_cliente_endereco'])->get()->first_row('array');
         $uf_cid = $this->db->select('sig_uf,nom_cida,idn_cida')->order_by('sig_uf ASC')->from('pref_abrasf_cidades')->get();
         $rs['uf_cidades'] = $uf_cid->result_array();
+        $endereco_query['logradouro'] = $endereco_query['endereco'];
+        $rs['data'] += $endereco_query;
 
+        $cidade_query = $this->db->select('sig_uf as uf,nom_cida as municipio')
+        ->from('pref_abrasf_cidades')
+        ->where('idn_cida',$endereco_query['id_pref_abrasf_cidades'])
+        ->get()->first_row('array');
 
-        // select de titulos da abrasf
-        $query = $this->db->select('*')->from('pref_abrasf_titulos')->get();
-        $rs['data_category2'] = $query->result_array();
-
-        // select de dependencias da abrasf
-        $query = $this->db->select('*')->from('pref_abrasf_dependencias')->get();
-        $rs['data_category3'] = $query->result_array();
-
+        $rs['data'] += $cidade_query;
         $this->data['content'] = $this->load->view('editar', $rs, TRUE);
-
         $this->load->view('structure', $this->data);
     }
 
@@ -125,6 +115,7 @@ class Admin_cliente extends MY_Controller {
             $this->db->set('complemento', $data['complemento']);
             $this->db->set('cep', $data['cep']);
             $this->db->set('numero', $data['numero']);
+            $this->db->set('bairro', $data['bairro']);
             $this->db->insert('cliente_endereco');
             $idEndereco = $this->db->insert_id();
 
