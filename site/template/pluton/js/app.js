@@ -9,23 +9,25 @@
  jQuery(document).ready(function ($) {
 
 
-    $("#mais").click(function(){
-        var vorigin = $("#vorigin").val();
-        var x = $("#qtd").val();
+    $("[name^='mais']").click(function(){
+        var id = this.id;
+        var vorigin = $("[name^='vorigin"+id+"']").val();
+        var x = $("[name^='qtd"+id+"']").val();
         x++;
         var valor = (vorigin * x);
-        $("#total").val(valor);
-        $("#qtd").val(x);
+        $("[name^='total"+id+"']").val(valor);
+        $("[name^='qtd"+id+"']").val(x);
 
     });
 
-    $("#menos").click(function(){
-        var vorigin = $("#vorigin").val();
-        var x = $("#qtd").val();
+    $("[name^='menos'").click(function(){
+        var id = this.id;
+        var vorigin = $("[name^='vorigin"+id+"']").val();
+        var x = $("[name^='qtd"+id+"']").val();
         x--;
         var valor = (vorigin * x);
-        $("#total").val(valor);
-        $("#qtd").val(x);
+        $("[name^='total"+id+"']").val(valor);
+        $("[name^='qtd"+id+"']").val(x);
 
     });
     

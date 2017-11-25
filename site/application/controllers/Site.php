@@ -22,6 +22,16 @@ class site extends CI_Controller {
             'view_pagina' => 'Site'
         );
         //$this->load->view('templates/header', $dados);
+        $produtos = array();
+        $produtos['salgados'][] = array('imagem'=>'salgados/croquete.png','titulo'=>'Croquete','descricao'=>'saborosos','unidade'=>true);
+        $produtos['salgados'][] = array('imagem'=>'salgados/coxinha01.png','titulo'=>'Coxinha','descricao'=>'saborosos','unidade'=>true);
+        $produtos['salgados'][] = array('imagem'=>'salgados/risoles.png','titulo'=>'risoles','descricao'=>'saborosos','unidade'=>true);
+        
+        $produtos['bolos'][] = array('imagem'=>'bolos/homemdeferro.jpg','titulo'=>'Homem de Ferro','descricao'=>'saborosos','unidade'=>false);
+        $produtos['bolos'][] = array('imagem'=>'bolos/minions.jpg','titulo'=>'Minions','descricao'=>'saborosos','unidade'=>false);
+        $produtos['bolos'][] = array('imagem'=>'bolos/gremio.png','titulo'=>'Grêmio','descricao'=>'saborosos','unidade'=>false);
+
+        $dados += $produtos;
         $this->load->view('site/index', $dados);
         //$this->load->view('templates/footer');
     }
