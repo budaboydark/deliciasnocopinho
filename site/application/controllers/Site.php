@@ -22,6 +22,9 @@ class site extends CI_Controller {
             'view_pagina' => 'Site'
         );
         //$this->load->view('templates/header', $dados);
+        $this->load->model('modulos');
+        $disable_modules = array('service','client','newsletter');
+        $modulos['modules'] = $this->modulos->modulos($disable_modules);
         $produtos = array();
         $produtos['salgados'][] = array('imagem'=>'salgados/croquete.png','titulo'=>'Croquete','descricao'=>'saborosos','unidade'=>true);
         $produtos['salgados'][] = array('imagem'=>'salgados/coxinha01.png','titulo'=>'Coxinha','descricao'=>'saborosos','unidade'=>true);
@@ -32,6 +35,7 @@ class site extends CI_Controller {
         $produtos['bolos'][] = array('imagem'=>'bolos/gremio.png','titulo'=>'Grêmio','descricao'=>'saborosos','unidade'=>false);
 
         $dados += $produtos;
+        $dados += $modulos;
         $this->load->view('site/index', $dados);
         //$this->load->view('templates/footer');
     }

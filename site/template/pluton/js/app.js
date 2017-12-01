@@ -402,17 +402,13 @@ $("#send-mail").click(function () {
 
 function initializeMap() {
 
-    var lat = '-30.0043737'; //Set your latitude.
-    var lon = '-51.164494'; //Set your longitude.
-
-    var centerLon = lon - 0.0105;
-
+    var uluru = {lat: -30.0043737, lng: -51.1623053 };
     var myOptions = {
         scrollwheel: false,
         draggable: false,
         disableDefaultUI: true,
-        center: new google.maps.LatLng(lat, centerLon),
-        zoom: 15,
+        center: new google.maps.LatLng(uluru),
+        zoom: 16,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
@@ -420,12 +416,11 @@ function initializeMap() {
     var map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
     var marker = new google.maps.Marker({
         map: map,
-        position: new google.maps.LatLng(lat, lon),
-
+        position: new google.maps.LatLng(uluru),
     });
 
     var infowindow = new google.maps.InfoWindow({
-        content: "Your content goes here!"
+        content: "Delícias no Copinho!"
     });
 
     google.maps.event.addListener(marker, 'click', function () {

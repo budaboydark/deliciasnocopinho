@@ -19,8 +19,7 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>template/pluton/js/jquery.placeholder.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>template/pluton/js/jquery.inview.js"></script>
         <!-- Load google maps api and call initializeMap function defined in app.js -->
-        <script async="" defer="" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=initializeMap"></script>
-        <!-- css3-mediaqueries.js for IE8 or older -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4Ll5JVKMtKHxwF0j60JSzzySoe3bx3pU&callback=initializeMap"  async defer></script><!-- css3-mediaqueries.js for IE8 or older -->
         <!--[if lt IE 9]>
             <script src="js/respond.min.js"></script>
         <![endif]-->
