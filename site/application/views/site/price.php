@@ -43,8 +43,8 @@
                     </div>
                 </div>
                 <div class="centered">
-                    <p class="price-text">We Offer Custom Plans. Contact Us For More Info.</p>
-                    <a href="<?php echo base_url(); ?>#contact" class="button">Contact Us</a>
+                    <p class="price-text">Faça agora sua encomenda de Natal e Ano novo.</p>
+                    <a href="<?php echo base_url(); ?>#contact" class="button">Encomendar</a>
                 </div>
             </div>
         </div>
