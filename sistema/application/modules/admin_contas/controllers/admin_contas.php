@@ -2,7 +2,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Admin_financeiro extends MY_Controller
+class Admin_contas extends MY_Controller
 {
 
     function __construct()
@@ -40,12 +40,9 @@ class Admin_financeiro extends MY_Controller
 
     public function index()
     {
-        /*
         $query = $this->db->select('*')->from($this->admin_model->table)->get();
         $rs['data'] = $query->result_array();
         $this->data['content'] = $this->load->view('list', $rs, TRUE);
-        */
-        $this->data['content'] = "TODO: PROJETO EM ANDAMENTO FINALIZAR ESTA SEMANA INSERT,LISTAGEM DE CONTAS, PARCELAMENTOS";
         $this->load->view('structure', $this->data);
     }
 
