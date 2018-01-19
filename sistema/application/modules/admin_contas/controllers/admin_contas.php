@@ -12,7 +12,7 @@ class Admin_contas extends MY_Controller
         /* load model admin */
         $this->load->model('admin/admin_model');
 
-        $this->admin_model->table = 'financeiro';
+        $this->admin_model->table = 'contas';
 
         /* layout config */
         $this->layout = 'backend/layouts/backend';
@@ -46,19 +46,8 @@ class Admin_contas extends MY_Controller
         $this->load->view('structure', $this->data);
     }
 
-    public function contas()
-    {
-        ###TODO FAZER##
-        $query = $this->db->select($this->admin_model->table . '.*, pref_contribuintes_instituicoes.nome')->from($this->admin_model->table)->join('pref_contribuintes_instituicoes', 'pref_contribuintes.idinstituicao = pref_contribuintes_instituicoes.id', 'left')->order_by('id DESC')->get();
-        $rs['data'] = $query->result_array();
-        $this->data['content'] = $this->load->view('liberar', $rs, TRUE);
-        $this->load->view('structure', $this->data);
-    }
-
     public function novo()
     {
-        $uf_cid = $this->db->select('sig_uf,nom_cida,idn_cida')->order_by('sig_uf ASC')->from('pref_abrasf_cidades')->get();
-        $rs['uf_cidades'] = $uf_cid->result_array();
         $this->data['content'] = $this->load->view('novo', $rs, TRUE);
         $this->load->view('structure', $this->data);
     }
