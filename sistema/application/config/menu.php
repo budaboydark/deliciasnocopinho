@@ -38,8 +38,10 @@ $config['menu_admin']['config']['modules'] = array('title' => 'Gerencia de Módu
 $config['menu_admin']['config']['help'] = array('title' => 'Ajuda', 'link' => 'admin/help', 'permissions' => '1,2', 'class' => 'support');
 $config['menu_admin']['config']['phpinfo'] = array('title' => 'Informações do Servidor', 'link' => 'admin/phpinfo', 'permissions' => '1', 'class' => 'support');
 
+$config['menu_admin']['financeiro']['contas'] = array('title' => 'Contas', 'link' => 'admin/financeiro', 'permissions' => '1,2', 'class' => 'editor');
+$config['menu_admin']['financeiro']['pagar'] = array('title' => 'Contas pagar', 'link' => 'admin/financeiroPagar', 'permissions' => '1,2', 'class' => 'editor');
+$config['menu_admin']['financeiro']['receber'] = array('title' => 'Contas receber', 'link' => 'admin/financeiroReceber', 'permissions' => '1,2', 'class' => 'editor');
 
-$config['menu_admin']['financeiro'] = array('title' => 'Financeiro', 'link' => 'admin/financeiro', 'permissions' => '1,2', 'class' => 'editor');
 /*
   |--------------------------------------------------------------------------
   | top menus admin
@@ -51,7 +53,6 @@ $config['menu_admin']['financeiro'] = array('title' => 'Financeiro', 'link' => '
  */
 $config['menu_top_admin']['dashboard'] = array('title' => 'Administra&ccedil;&atilde;o', 'link' => 'admin/dashboard', 'permissions' => '1,2', 'ico' => 'users');
 $config['menu_top_admin']['financeiro'] = array('title' => 'Financeiro', 'link' => 'admin/financeiro', 'permissions' => '1,2', 'ico' => 'users');
-//$config['menu_top_admin']['servicos'] = array('title' => 'Protesto', 'link' => 'admin/servicos', 'permissions' => '1,2', 'ico' => 'flatscreen');
 $config['menu_top_admin']['relatorios'] = array('title' => 'Relat&oacute;rios', 'link' => 'admin/relatorios', 'permissions' => '1,2', 'ico' => 'chart');
 $config['menu_top_admin']['ajuda'] = array('title' => 'Ajuda', 'link' => 'admin/ajuda', 'permissions' => '1,2', 'ico' => 'speech');
 

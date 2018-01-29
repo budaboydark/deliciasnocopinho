@@ -2,7 +2,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Admin_financeiro extends MY_Controller
+class Admin_financeiroReceber extends MY_Controller
 {
 
     function __construct()
@@ -23,10 +23,10 @@ class Admin_financeiro extends MY_Controller
 
         /* info dislay */
         $this->data['info'] = array(
-            'title' => 'Financeiro',
+            'title' => 'Financeiro/contas receber',
             'description' => 'Gerenciador de Finanças',
             'menu_active' => 'financeiro',
-            'submenu_active' => 'contas'
+            'submenu_active' => 'receber'
         );
 
         $this->validate = array(
