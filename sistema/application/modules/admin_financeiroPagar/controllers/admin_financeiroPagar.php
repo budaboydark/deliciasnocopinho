@@ -12,7 +12,7 @@ class Admin_financeiroPagar extends MY_Controller
         /* load model admin */
         $this->load->model('admin/admin_model');
 
-        $this->admin_model->table = 'financeiro';
+        $this->admin_model->table = 'contas_pagar';
 
         /* layout config */
         $this->layout = 'backend/layouts/backend';
@@ -31,8 +31,8 @@ class Admin_financeiroPagar extends MY_Controller
 
         $this->validate = array(
             array(
-                'field' => 'nome',
-                'label' => 'Nome',
+                'field' => 'conta',
+                'label' => 'Conta',
                 'rules' => 'required|trim'
             )
         );
@@ -40,12 +40,9 @@ class Admin_financeiroPagar extends MY_Controller
 
     public function index()
     {
-        /*
         $query = $this->db->select('*')->from($this->admin_model->table)->get();
         $rs['data'] = $query->result_array();
         $this->data['content'] = $this->load->view('list', $rs, TRUE);
-        */
-        $this->data['content'] = "TODO: PROJETO EM ANDAMENTO FINALIZAR ESTA SEMANA INSERT,LISTAGEM DE CONTAS, PARCELAMENTOS";
         $this->load->view('structure', $this->data);
     }
 

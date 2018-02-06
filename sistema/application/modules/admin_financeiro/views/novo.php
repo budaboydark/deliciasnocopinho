@@ -7,165 +7,42 @@
 <div id="add" class="subcontent">
     <form id="form1" class="stdform" method="post" action="<?php echo site_url('admin/' . $this->uri->segment(2) . '/save'); ?>" enctype="multipart/form-data" >
         <p>
-            <label>Nome*:</label>
-            <span class="field">
-                <input type="text" name="nome" id="nome" class="mediuminput" data-validate="{validate:{required:true, messages:{required:'O campo Nome é obrigat&oacute;rio'}}}"  />
-                <?php echo ($this->error->form_error('nome')); ?>
-            </span>
-        </p>
-        <p>
-            <label>Email</label>
-            <span class="field">
-                <input type="text" name="email" id="email" class="mediuminput <?php if ($this->error->form_error('email') != '') echo 'error'; ?>" value="<?php
-                if (htmlspecialchars($data['email']) != '')
-                    echo htmlspecialchars($data['email']);
-                else
-                    echo $this->error->set_value('email');
-                ?>" data-validate="{validate:{required:true, email: true, messages:{required:'O campo Email é obrigat&oacute;rio',email:'O campo Email é inv&aacute;lido'}}}" />
-                        <?php echo ($this->error->form_error('email')); ?>
-            </span>
-        </p>
-        <p>
-            <label>Logradouro*:</label>
-            <span class="field">
-                <input type="text" name="logradouro" id="logradouro" class="mediuminput" value="<?php
-                if (htmlspecialchars($data['logradouro']) != '')
-                    echo htmlspecialchars($data['logradouro']);
-                else
-                    echo $this->error->set_value('logradouro');
-                ?>"   data-validate="{validate:{required:true, messages:{required:'O campo Logradouro é obrigat&oacute;rio'}}}"  />
-                       <?php echo ($this->error->form_error('logradouro')); ?>
-            </span>
-        </p>
-        <p>
-            <label>N&uacute;mero*:</label>
-            <span class="field">
-                <input type="text" name="numero" id="numero" class="smallinput" value="<?php
-                if (htmlspecialchars($data['numero']) != '')
-                    echo htmlspecialchars($data['numero']);
-                else
-                    echo $this->error->set_value('numero');
-                ?>"   data-validate="{validate:{required:true, messages:{required:'O campo N&uacute;mero é obrigat&oacute;rio'}}}"  />
-                       <?php echo ($this->error->form_error('numero')); ?>
-            </span>
-        </p>
-        <p>
-            <label>Complemento:</label>
-            <span class="field">
-                <input type="text" name="complemento" id="complemento" class="smallinput" value="<?php
-                if (htmlspecialchars($data['complemento']) != '')
-                    echo htmlspecialchars($data['complemento']);
-                else
-                    echo $this->error->set_value('complemento');
-                ?>" />
-                       <?php echo ($this->error->form_error('complemento')); ?>
-            </span>
-        </p>
-        <p>
-            <label>Bairro:</label>
-            <span class="field">
-                <input type="text" name="bairro" id="bairro" class="smallinput" value="<?php
-                if (htmlspecialchars($data['bairro']) != '')
-                    echo htmlspecialchars($data['bairro']);
-                else
-                    echo $this->error->set_value('bairro');
-                ?>" />
-                       <?php echo ($this->error->form_error('bairro')); ?>
-            </span>
-        </p>
-        <p>
-            <label>UF</label>
+            <label>Tipo de conta*</label>
             <?php
             $options = array(
-                'AC' => 'AC',
-                'AL' => 'AL',
-                'AM' => 'AM',
-                'AP' => 'AP',
-                'BA' => 'BA',
-                'CE' => 'CE',
-                'DF' => 'DF',
-                'ES' => 'ES',
-                'GO' => 'GO',
-                'MA' => 'MA',
-                'MG' => 'MG',
-                'MS' => 'MS',
-                'MT' => 'MT',
-                'PA' => 'PA',
-                'PB' => 'PB',
-                'PE' => 'PE',
-                'PI' => 'PI',
-                'PR' => 'PR',
-                'RJ' => 'RJ',
-                'RN' => 'RN',
-                'RO' => 'RO',
-                'RR' => 'RR',
-                'RS' => 'RS',
-                'SC' => 'SC',
-                'SE' => 'SE',
-                'SP' => 'SP',
-                'TO' => 'TO',
+                'P' => 'Pagar',
+                'R' => 'Receber',
             );
-
-            echo form_dropdown('uf', $options,'RS', 'large', 'data-validate="{validate:{required:true, messages:{required:\'O campo UF Prestador é obrigatório\'}}}"');
+            echo form_dropdown('tipo', $options,'P','large','data-validate="{validate:{required:true, messages:{required:\'O campo Tipo conta é obrigatório\'}}}"');
             ?>
         </p>
-        <p>
-            <label>Munic&iacute;pio</label>
-            <span id="rescidade" class="field">
-                <?php
-                foreach ($uf_cidades as $cidade) {
-                    $cid[$cidade['nom_cida']] = $cidade['nom_cida'];
-                }
-                echo form_dropdown('municipio', $cid,'PORTO ALEGRE', 'large', 'data-validate="{validate:{required:true, messages:{required:\'O campo UF Prestador é obrigatório\'}}}"');
-                ?>
-            </span>            
-        </p>
 
         <p>
-            <label>CEP:</label>
+            <label>Conta*:</label>
             <span class="field">
-                <input type="text" name="cep" id="cep" class="smallinput cep" value="<?php
-                if (htmlspecialchars($data['cep']) != '')
-                    echo htmlspecialchars($data['cep']);
-                else
-                    echo $this->error->set_value('cep');
-                ?>" />
-                       <?php echo ($this->error->form_error('cep')); ?>
-            </span>
-        </p>
-        <!-- uf e municipio -->
-        <p>
-            <label>Situa&ccedil;&atilde;o*:</label>
-            <span class="field">
-                <?php
-                $status_option = array('A' => 'Ativo', 'I' => 'Inativo');
-                ?>
-                <?php echo form_dropdown('estado', $status_option, $data['estado'], ' class="longinput" data-validate="{validate:{required:true, messages:{required:\'O campo Situa&ccedil;&atilde;o é obrigat&oacute;rio\'}}}"'); ?>
-                <label for="estado" generated="true" class="error" style="display: none;">O campo Situa&ccedil;&atilde;o é obrigat&oacute;rio</label>
+                <input type="text" name="conta" id="conta" class="mediuminput" data-validate="{validate:{required:true, messages:{required:'O campo Conta é obrigat&oacute;rio'}}}"  />
+                <?php echo ($this->error->form_error('conta')); ?>
             </span>
         </p>
         <p>
-            <label>Fone 01*:</label>
+            <label>Qtd parcelas*:</label>
             <span class="field">
-                <input type="text" name="fone01" id="fone01" class="smallinput phones" value="<?php
-                if (htmlspecialchars($data['fone01']) != '')
-                    echo htmlspecialchars($data['fone01']);
-                else
-                    echo $this->error->set_value('fone01');
-                ?>"   data-validate="{validate:{required:true, messages:{required:'O campo Fone 01 é obrigat&oacute;rio'}}}"  />
-                       <?php echo ($this->error->form_error('fone01')); ?>
+                <input type="text" name="qtd_parcelas" id="qtd_parcelas" class="mediuminput" data-validate="{validate:{required:true, messages:{required:'O campo Qtd parcelas é obrigat&oacute;rio'}}}"  />
+                <?php echo ($this->error->form_error('qtd_parcelas')); ?>
             </span>
         </p>
         <p>
-            <label>Fone 02:</label>
+            <label>Fornecedor*:</label>
             <span class="field">
-                <input type="text" name="fone02" id="fone02" class="smallinput phones" value="<?php
-                if (htmlspecialchars($data['fone02']) != '')
-                    echo htmlspecialchars($data['fone02']);
-                else
-                    echo $this->error->set_value('fone02');
-                ?>" />
-                       <?php echo ($this->error->form_error('fone02')); ?>
+                <input type="text" name="fornecedor" id="fornecedor" class="mediuminput" data-validate="{validate:{required:true, messages:{required:'O campo Fornecedor é obrigat&oacute;rio'}}}"  />
+                <?php echo ($this->error->form_error('fornecedor')); ?>
+            </span>
+        </p>
+        <p>
+            <label>Valor*:</label>
+            <span class="field">
+                <input type="text" name="valor" id="valor" class="smallinput" data-validate="{validate:{required:true, messages:{required:'O campo Valor é obrigat&oacute;rio'}}}"  />
+                <?php echo ($this->error->form_error('valor')); ?>
             </span>
         </p>
         <p class="stdformbutton">

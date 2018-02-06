@@ -12,7 +12,7 @@ class Admin_financeiro extends MY_Controller
         /* load model admin */
         $this->load->model('admin/admin_model');
 
-        $this->admin_model->table = 'financeiro';
+        $this->admin_model->table = 'contas';
 
         /* layout config */
         $this->layout = 'backend/layouts/backend';
@@ -31,8 +31,8 @@ class Admin_financeiro extends MY_Controller
 
         $this->validate = array(
             array(
-                'field' => 'nome',
-                'label' => 'Nome',
+                'field' => 'conta',
+                'label' => 'Conta',
                 'rules' => 'required|trim'
             )
         );
@@ -40,12 +40,11 @@ class Admin_financeiro extends MY_Controller
 
     public function index()
     {
-        /*
+        
         $query = $this->db->select('*')->from($this->admin_model->table)->get();
         $rs['data'] = $query->result_array();
         $this->data['content'] = $this->load->view('list', $rs, TRUE);
-        */
-        $this->data['content'] = "TODO: PROJETO EM ANDAMENTO FINALIZAR ESTA SEMANA INSERT,LISTAGEM DE CONTAS, PARCELAMENTOS";
+        //$this->data['content'] = "TODO: PROJETO EM ANDAMENTO FINALIZAR ESTA SEMANA INSERT,LISTAGEM DE CONTAS, PARCELAMENTOS";
         $this->load->view('structure', $this->data);
     }
 
@@ -159,36 +158,30 @@ class Admin_financeiro extends MY_Controller
             }
         } else {
             $data = $this->input->post(NULL, TRUE);
-            $cliente_query = $this->db->select_max('id')->get('cliente')->result_object();
-            foreach ($cliente_query as $cliente_query) {
+            $login = $this->session->userdata('admin');
+            $parcelasIni = 1;
+            if($data['tipo'] == 'P'){
+                $tabela = 'contas_pagar';
+            }elseif($data['tipo'] == 'R'){
+                $tabela = 'contas_receber';
             }
-            $cidades = $this->db->select('idn_cida as id')->where('sig_uf', $data['uf'])->where('nom_cida', $data['municipio'])->get('pref_abrasf_cidades')->result_object();
-            foreach ($cidades as $cidades) {
+            $this->db->set('valor', to_decimal($data['valor']));
+            $this->db->set('qtd_parcelas', $data['qtd_parcelas']);
+            $this->db->set('fornecedor', $data['fornecedor']);
+            $this->db->set('conta', $data['conta']);
+            $this->db->set('usuario',$login['user_id']);
+            $this->db->insert('contas');
+            $idConta = $this->db->insert_id();
+
+            while($parcelasIni <= $data['qtd_parcelas']){
+                $this->db->set('nome', $data['conta']);
+                $this->db->set('numeroparcela', $parcelasIni);
+                $this->db->set('valorparcela', to_decimal($data['valor']));
+                $this->db->set('status','N');
+                $this->db->set('idcontas', $idConta);
+                $this->db->insert($tabela);
+                $parcelasIni++;
             }
-
-            if ($cliente_query->id == '') {
-                $cliente_query->id = 1;
-            } else {
-                $cliente_query->id = $cliente_query->id + 1;
-            }
-
-            $this->db->set('id_cliente', $cliente_query->id);
-            $this->db->set('id_pref_abrasf_cidades', $cidades->id);
-            $this->db->set('endereco', $data['logradouro']);
-            $this->db->set('complemento', $data['complemento']);
-            $this->db->set('cep', $data['cep']);
-            $this->db->set('numero', $data['numero']);
-            $this->db->set('bairro', $data['bairro']);
-            $this->db->insert('cliente_endereco');
-            $idEndereco = $this->db->insert_id();
-
-            $cliente['nome'] = $data['nome'];
-            $cliente['id_cliente_endereco'] = $idEndereco;
-            $cliente['email'] = $data['email'];
-            $cliente['estado'] = $data['estado'];
-            $cliente['fone1'] = $data['fone01'];
-            $cliente['fone2'] = $data['fone02'];
-            $this->admin_model->save($cliente);
             /* message return success */
             $this->admin_model->setAlert(array('type' => 'success', 'msg' => array('Dados salvos com sucesso!')));
             redirect('/admin/' . $this->uri->segment(2), 'location');

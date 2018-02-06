@@ -10,10 +10,10 @@
         <thead>
             <tr>
                 <th class="head1 nosort"><a class="btn btn_trash" href="javascript:void(0);"><span>Excluir</span></a></th>
-                <th class="head1">Nome</th>
-                <th class="head1">Fone</th>
-                <th class="head1">Email</th>
-                <th class="head1">Situa&ccedil;&atilde;o</th>
+                <th class="head1">Valor</th>
+                <th class="head1">QtdParcelas</th>
+                <th class="head1">Fornecedor</th>
+                <th class="head1">Conta</th>
             </tr>
         </thead>
         <thead>
@@ -38,10 +38,10 @@
                     <td align="center">
                         <span class="center"><input type="checkbox" name="delete_id[]" value="<?php echo $_data['id']; ?>" /></span>
                     </td>
-                    <td><?php echo $_data['nome']; ?></td>
-                    <td><?php echo $_data['fone1']; ?></td>
-                    <td><?php echo $_data['email']; ?></td>
-                    <td><?php echo $_data['estado'] == 'A' ? 'Ativo' : 'Inativo'; ?></td>
+                    <td><?php echo DecToMoeda($_data['valor']); ?></td>
+                    <td><?php echo $_data['qtd_parcelas']; ?></td>
+                    <td><?php echo $_data['fornecedor']; ?></td>
+                    <td><?php echo $_data['conta']; ?></td>
                 </tr>
     <?php $i++;
 endforeach; ?>
