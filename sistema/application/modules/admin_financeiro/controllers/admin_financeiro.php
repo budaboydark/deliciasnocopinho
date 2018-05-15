@@ -40,10 +40,10 @@ class Admin_financeiro extends MY_Controller
 
     public function index()
     {
-        
+
         $query = $this->db->select('*')->from($this->admin_model->table)->get();
         $rs['data'] = $query->result_array();
-        $this->data['content'] = $this->load->view('list', $rs, TRUE);
+        $this->data['content'] = $this->load->view('list', $rs, true);
         //$this->data['content'] = "TODO: PROJETO EM ANDAMENTO FINALIZAR ESTA SEMANA INSERT,LISTAGEM DE CONTAS, PARCELAMENTOS";
         $this->load->view('structure', $this->data);
     }
@@ -53,7 +53,7 @@ class Admin_financeiro extends MY_Controller
         ###TODO FAZER##
         $query = $this->db->select($this->admin_model->table . '.*, pref_contribuintes_instituicoes.nome')->from($this->admin_model->table)->join('pref_contribuintes_instituicoes', 'pref_contribuintes.idinstituicao = pref_contribuintes_instituicoes.id', 'left')->order_by('id DESC')->get();
         $rs['data'] = $query->result_array();
-        $this->data['content'] = $this->load->view('liberar', $rs, TRUE);
+        $this->data['content'] = $this->load->view('liberar', $rs, true);
         $this->load->view('structure', $this->data);
     }
 
@@ -61,7 +61,7 @@ class Admin_financeiro extends MY_Controller
     {
         $uf_cid = $this->db->select('sig_uf,nom_cida,idn_cida')->order_by('sig_uf ASC')->from('pref_abrasf_cidades')->get();
         $rs['uf_cidades'] = $uf_cid->result_array();
-        $this->data['content'] = $this->load->view('novo', $rs, TRUE);
+        $this->data['content'] = $this->load->view('novo', $rs, true);
         $this->load->view('structure', $this->data);
     }
 
@@ -86,14 +86,14 @@ class Admin_financeiro extends MY_Controller
             ->get()->first_row('array');
 
         $rs['data'] += $cidade_query;
-        $this->data['content'] = $this->load->view('editar', $rs, TRUE);
+        $this->data['content'] = $this->load->view('editar', $rs, true);
         $this->load->view('structure', $this->data);
     }
 
     public function update()
     {
         $this->form_validation->set_rules($this->validate);
-        if ($this->form_validation->run() == FALSE) {
+        if ($this->form_validation->run() == false) {
             $this->error->set($this->validate);
             /* message return error */
             $this->admin_model->setAlert(array('type' => 'error', 'msg' => array('Erro no envio dos dados!')));
@@ -104,10 +104,10 @@ class Admin_financeiro extends MY_Controller
                 redirect('/admin/' . $this->uri->segment(2) . '/novo/', 'location');
             }
         } else {
-            $data = $this->input->post(NULL, TRUE);
+            $data = $this->input->post(null, true);
             if ($data['id']) {
 
-                $cliente_endereco = $this->db->select('id')->from('cliente_endereco')->where('id_cliente',$data['id'])->get()->first_row('object');
+                $cliente_endereco = $this->db->select('id')->from('cliente_endereco')->where('id_cliente', $data['id'])->get()->first_row('object');
                 $cidades = $this->db->select('idn_cida as id')->where('sig_uf', $data['uf'])->where('nom_cida', $data['municipio'])->get('pref_abrasf_cidades')->first_row('object');
 
                 $this->db->set('id_cliente', $data['id']);
@@ -117,7 +117,7 @@ class Admin_financeiro extends MY_Controller
                 $this->db->set('cep', $data['cep']);
                 $this->db->set('numero', $data['numero']);
                 $this->db->set('bairro', $data['bairro']);
-                $this->db->where('id',$cliente_endereco->id);
+                $this->db->where('id', $cliente_endereco->id);
                 $this->db->update('cliente_endereco');
 
                 $cliente['nome'] = $data['nome'];
@@ -146,7 +146,7 @@ class Admin_financeiro extends MY_Controller
 
         $this->form_validation->set_rules($this->validate);
 
-        if ($this->form_validation->run() == FALSE) {
+        if ($this->form_validation->run() == false) {
             $this->error->set($this->validate);
             /* message return error */
             $this->admin_model->setAlert(array('type' => 'error', 'msg' => array('Erro no envio dos dados!')));
@@ -157,27 +157,27 @@ class Admin_financeiro extends MY_Controller
                 redirect('/admin/' . $this->uri->segment(2) . '/novo/', 'location');
             }
         } else {
-            $data = $this->input->post(NULL, TRUE);
+            $data = $this->input->post(null, true);
             $login = $this->session->userdata('admin');
             $parcelasIni = 1;
-            if($data['tipo'] == 'P'){
+            if ($data['tipo'] == 'P') {
                 $tabela = 'contas_pagar';
-            }elseif($data['tipo'] == 'R'){
+            } elseif ($data['tipo'] == 'R') {
                 $tabela = 'contas_receber';
             }
             $this->db->set('valor', to_decimal($data['valor']));
             $this->db->set('qtd_parcelas', $data['qtd_parcelas']);
             $this->db->set('fornecedor', $data['fornecedor']);
             $this->db->set('conta', $data['conta']);
-            $this->db->set('usuario',$login['user_id']);
+            $this->db->set('usuario', $login['user_id']);
             $this->db->insert('contas');
             $idConta = $this->db->insert_id();
 
-            while($parcelasIni <= $data['qtd_parcelas']){
+            while ($parcelasIni <= $data['qtd_parcelas']) {
                 $this->db->set('nome', $data['conta']);
                 $this->db->set('numeroparcela', $parcelasIni);
                 $this->db->set('valorparcela', to_decimal($data['valor']));
-                $this->db->set('status','N');
+                $this->db->set('status', 'N');
                 $this->db->set('idcontas', $idConta);
                 $this->db->insert($tabela);
                 $parcelasIni++;
@@ -206,11 +206,11 @@ class Admin_financeiro extends MY_Controller
 
         /* validate */
         if (is_array($id)) :
-            foreach($id as $ids){
-                $cliente = $this->db->select('id_cliente_endereco')->where('id', $ids)->get('cliente')->first_row('object');
-                $this->db->from('cliente_endereco')->where('id', $cliente->id_cliente_endereco)->delete();
-            }
-            $this->admin_model->delete($id);
+            foreach ($id as $ids) {
+            $cliente = $this->db->select('id_cliente_endereco')->where('id', $ids)->get('cliente')->first_row('object');
+            $this->db->from('cliente_endereco')->where('id', $cliente->id_cliente_endereco)->delete();
+        }
+        $this->admin_model->delete($id);
             /* message return success */
         $this->admin_model->setAlert(array('type' => 'success', 'msg' => array('Dados excluídos com sucesso!')));
         else :
